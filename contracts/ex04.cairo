@@ -85,6 +85,19 @@ func insert_star{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_p
     
     # TODO
     # If the new user slot is equal to 1, 10 or 100, increment the caller rank
+    if current_slot == 1:
+        [ap] = address; ap++
+        call increase_rank
+    end
+    if current_slot == 10:
+        [ap] = address; ap++
+        call increase_rank
+    end
+    if current_slot == 10:
+        [ap] = address; ap++
+        call increase_rank
+    end
+
     # You will be confronted to revoked referenced
     # https://www.cairo-lang.org/docs/how_cairo_works/consts.html#revoked-references
     # That's one of the most tricky feature of cairo. Treat yourself !
